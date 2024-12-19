@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection Manager</title>
+    <link href="sheet.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Collection Manager</h1>
+        <div class="form-container">
+            <h3>Add a Movie</h3>
+            <form id="movie-form">
+                <input type="text" id="title" class="form-control" placeholder="Movie Title" required>
+                <input type="text" id="genre" class="form-control" placeholder="Genre" required>
+                <input type="number" id="rating" class="form-control" placeholder="Rating (0-10)" required min="0" max="10">
+                <input type="number" id="releaseYear" class="form-control" placeholder="Release Year" required min="1900">
+                <button type="submit" class="btn">Add Movie</button>
+            </form>
+        </div>
+        <div class="filter-container">
+            <h3>Filters</h3>
+            <div class="filter-options">
+                <select id="genre-filter" class="form-control">
+                    <option value="">All Genres</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Action">Action</option>
+                    <option value="Drama">Drama</option>
+                </select>
+                <input type="number" id="release-year-search" class="form-control" placeholder="Search by Year" min="1800">
+            </div>
+        </div>
+        <ul id="movie-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
